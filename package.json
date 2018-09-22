@@ -8,9 +8,10 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint"
+    "test": "mocha"
   },
   "dependencies": {
+    "chai": "^4.1.2",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^3.10.0",
@@ -18,9 +19,11 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",
     "loopback-connector-mongodb": "^3.8.0",
+    "mocha": "^5.2.0",
     "mongodb": "^3.1.6",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^3.0.0"
+    "strong-error-handler": "^3.0.0",
+    "supertest": "^3.3.0"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
