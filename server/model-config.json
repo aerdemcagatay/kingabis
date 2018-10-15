@@ -13,26 +13,30 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db"
-  },
   "AccessToken": {
-    "dataSource": "db",
-    "public": false
+    "dataSource": "mongo",
+    "public": false,
+    "relations": {
+      "customer": {
+        "type": "belongsTo",
+        "model": "customer",
+        "foreignKey": "customerId"
+      }
+    }
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "Customer": {
@@ -40,6 +44,14 @@
     "public": true
   },
   "Order": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Item": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Message": {
     "dataSource": "mongo",
     "public": true
   }
