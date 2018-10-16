@@ -78,7 +78,7 @@ module.exports = function(Customer)
         });
     });
 
-
+/*
     // login, if customer then start an order
     Customer.afterRemote('login', function(ctx, customer, next)
     {
@@ -114,4 +114,5 @@ module.exports = function(Customer)
             });
         });
     });
+*/
 };
