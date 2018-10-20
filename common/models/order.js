@@ -13,6 +13,11 @@ module.exports = function(Order)
     {
         checkAuth(ctx.res.req.accessToken.userId, ctx.instance.id, next);
     });
+    // authenticate users before removing an item from an order
+    Order.beforeRemote('*.__get__items', function(ctx, link, next)
+    {
+        checkAuth(ctx.res.req.accessToken.userId, ctx.instance.id, next);
+    });
     // authenticate users before checkout
     Order.beforeRemote('checkout', function(ctx, link, next)
     {

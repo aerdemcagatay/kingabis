@@ -61,6 +61,13 @@
             "principalType": "ROLE",
             "principalId": "customer",
             "permission": "ALLOW"
+        },
+        {
+            "property": "__get__items",
+            "accessType": "*",
+            "principalType": "ROLE",
+            "principalId": "customer",
+            "permission": "ALLOW"
         }
     ],
     "methods": {}

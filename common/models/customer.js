@@ -97,8 +97,6 @@ module.exports = function(Customer)
             customer.role = cust.role;
             customer.username = cust.username;
 
-            next();
-/*
             // employees dont have orders so return
             if (cust.role == 'employee')
             {
@@ -107,7 +105,7 @@ module.exports = function(Customer)
             }
 
             // automatically creates an empty order belong to themselves when customer logging in
-            app.models.Order.create({customerId: customer.userId}, function(error)
+            app.models.Order.create({customerId: customer.userId}, function(error, order)
             {
                 // mongo write error
                 if (error)
@@ -116,10 +114,11 @@ module.exports = function(Customer)
                     next(error);
                     return;
                 }
+    
+                customer.currentOrder = order.id;
 
                 next();
             });
-*/
         });
     });
 };

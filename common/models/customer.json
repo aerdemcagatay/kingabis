@@ -31,6 +31,10 @@
         "role": {
             "type": "string",
             "required": true
+        },
+        "currentOrder": {
+            "type": "string",
+            "required": false
         }
     },
     "validations": [],
