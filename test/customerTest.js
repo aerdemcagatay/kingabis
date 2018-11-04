@@ -33,6 +33,8 @@ var item = {
 
 describe('Customer Tests:', function() 
 {
+    this.timeout(15000);
+    
     it('01: POST   /Customers             	Create a new employee', function(done)
     {
         employee = Customer('employee');
