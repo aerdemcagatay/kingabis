@@ -321,3 +321,7 @@ describe('Order Tests:', function()
             .expect(noContent, done);
     });
 });
+after(function()
+{
+    process.exit(0);
+});
