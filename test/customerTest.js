@@ -1,4 +1,4 @@
-/*var supertest = require('supertest');
+var supertest = require('supertest');
 var app = require('../server/server');
 var api = supertest(app);
 
@@ -321,4 +321,3 @@ describe('Order Tests:', function()
             .expect(noContent, done);
     });
 });
-*/
