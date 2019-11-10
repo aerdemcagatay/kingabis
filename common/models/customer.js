@@ -45,6 +45,7 @@ module.exports = function(Customer)
 
 
     // this is for special guest login
+    /*
     Customer.beforeRemote('login', function(ctx, customer, next)
     {
         // only perform this task for guests
@@ -77,6 +78,7 @@ module.exports = function(Customer)
             roleMap(cust, next);
         });
     });
+    */
 
 /*
     // login, if customer then start an order
